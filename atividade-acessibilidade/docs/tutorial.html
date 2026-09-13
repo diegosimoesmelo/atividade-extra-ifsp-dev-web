@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+      :root {
+        --text: #17201f;
+        --muted: #465653;
+        --primary: #005c55;
+        --soft: #e9f5f3;
+        --line: #b8cbc7;
+        --code: #101918;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        line-height: 1.55;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 40px 28px 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        color: var(--primary);
+        font-size: 30pt;
+      }
+
+      h2 {
+        margin-top: 34px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid var(--line);
+        color: var(--primary);
+        font-size: 20pt;
+      }
+
+      h3 {
+        margin-top: 22px;
+        font-size: 15pt;
+      }
+
+      p {
+        margin: 9px 0;
+      }
+
+      ul,
+      ol {
+        padding-left: 24px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      code {
+        font-family: Consolas, "Courier New", monospace;
+      }
+
+      pre {
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+        margin: 14px 0;
+        padding: 14px;
+        border-radius: 8px;
+        background: var(--code);
+        color: #f4fffd;
+        font-size: 9.5pt;
+      }
+
+      figure {
+        margin: 18px 0;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      figcaption {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 10.5pt;
+      }
+
+      .cover {
+        padding: 30px;
+        border-radius: 8px;
+        background: var(--soft);
+      }
+
+      .meta {
+        margin-top: 20px;
+        color: var(--muted);
+      }
+
+      .checklist {
+        columns: 2;
+      }
+
+      .note {
+        padding: 12px 14px;
+        border-left: 5px solid var(--primary);
+        background: var(--soft);
+      }
+
+      @media print {
+        @page {
+          margin: 1.6cm;
+        }
+
+        body {
+          font-size: 11pt;
+        }
+
+        main {
+          max-width: none;
+          padding: 0;
+        }
+
+        h2,
+        figure {
+          break-inside: avoid;
+        }
+
+        pre {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="cover" aria-labelledby="titulo-documento">
+        <h1 id="titulo-documento">Tutorial: Página Web Acessível</h1>
+        <p><strong>Projeto:</strong> Tech Para Todos - Oficina de Inclusão Digital</p>
+        <p><strong>Tema:</strong> evento educativo gratuito sobre tecnologia, autonomia digital e acessibilidade.</p>
+        <p class="meta">Atividade Prática - Acessibilidade Web e HTML Semântico</p>
+      </section>
+
+      <h2>1. Apresentação do projeto</h2>
+      <p>
+        O projeto desenvolvido foi uma página web chamada <strong>Tech Para Todos</strong>.
+        A proposta da página é divulgar uma oficina gratuita de inclusão digital para
+        pessoas interessadas em aprender recursos básicos de tecnologia, navegação segura
+        e ferramentas de acessibilidade.
+      </p>
+      <p>
+        O tema foi escolhido porque combina diretamente com a proposta da atividade:
+        construir uma página compreensível, bem organizada e acessível para diferentes
+        perfis de usuários.
+      </p>
+
+      <h2>2. Organização dos arquivos</h2>
+      <p>Os arquivos foram organizados em uma pasta própria chamada <code>atividade-acessibilidade</code>.</p>
+      <ul>
+        <li><code>index.html</code>: arquivo principal da página.</li>
+        <li><code>styles.css</code>: folha de estilos usada para cores, layout, foco e responsividade.</li>
+        <li><code>assets/oficina-inclusao-digital.png</code>: imagem principal da página com texto alternativo.</li>
+        <li><code>screenshots/desktop.png</code>: captura da página em tela grande.</li>
+        <li><code>docs/tutorial.html</code>: documento do tutorial em formato HTML para impressão.</li>
+        <li><code>docs/tutorial-tech-para-todos.pdf</code>: versão final em PDF para entrega.</li>
+      </ul>
+
+      <h2>3. Estrutura principal do HTML</h2>
+      <p>
+        A página começa com <code>&lt;!doctype html&gt;</code> e usa
+        <code>&lt;html lang="pt-BR"&gt;</code>. O atributo <code>lang</code> informa
+        que o conteúdo está em português do Brasil, ajudando leitores de tela e navegadores.
+      </p>
+      <pre><code>&lt;!doctype html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Tech Para Todos | Oficina de Inclusão Digital&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
+      <p>
+        A tag <code>&lt;meta name="viewport"&gt;</code> foi utilizada para permitir que
+        o layout se adapte a celulares e tablets. Isso contribui para a acessibilidade
+        porque evita zoom desnecessário e melhora a leitura em telas menores.
+      </p>
+
+      <h2>4. Tags semânticas utilizadas</h2>
+      <p>
+        O HTML semântico foi usado para dar significado às partes da página. Em vez de
+        usar apenas <code>&lt;div&gt;</code>, cada área recebeu uma tag apropriada.
+      </p>
+      <pre><code>&lt;body&gt;
+  &lt;a class="skip-link" href="#conteudo-principal"&gt;Pular para o conteúdo principal&lt;/a&gt;
+
+  &lt;header class="site-header" id="inicio"&gt;
+    &lt;nav class="navbar" aria-label="Navegação principal"&gt;
+      &lt;!-- nav agrupa os links principais da página --&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main id="conteudo-principal" tabindex="-1"&gt;
+    &lt;section id="sobre" aria-labelledby="titulo-sobre"&gt;&lt;/section&gt;
+    &lt;section id="programacao" aria-labelledby="titulo-programacao"&gt;&lt;/section&gt;
+    &lt;section id="acessibilidade" aria-labelledby="titulo-acessibilidade"&gt;&lt;/section&gt;
+    &lt;section id="inscricao" aria-labelledby="titulo-inscricao"&gt;&lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      <ul>
+        <li><code>&lt;header&gt;</code>: identifica o cabeçalho da página e apresenta o projeto.</li>
+        <li><code>&lt;nav&gt;</code>: agrupa os links de navegação, facilitando o uso por leitores de tela.</li>
+        <li><code>&lt;main&gt;</code>: marca o conteúdo principal, ajudando o usuário a localizar a parte central da página.</li>
+        <li><code>&lt;section&gt;</code>: divide o conteúdo em blocos temáticos.</li>
+        <li><code>&lt;article&gt;</code>: usado em blocos independentes, como cards de informação.</li>
+        <li><code>&lt;aside&gt;</code>: usado para informações complementares, como dados rápidos do evento.</li>
+        <li><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code>: relacionam a imagem com uma legenda.</li>
+        <li><code>&lt;footer&gt;</code>: apresenta informações finais e link para voltar ao início.</li>
+      </ul>
+
+      <h2>5. Hierarquia dos títulos</h2>
+      <p>
+        A página possui apenas um <code>&lt;h1&gt;</code>, que representa o título principal.
+        As seções usam <code>&lt;h2&gt;</code>, e os subtítulos internos usam
+        <code>&lt;h3&gt;</code>. Essa ordem ajuda pessoas que navegam por títulos em
+        leitores de tela.
+      </p>
+      <pre><code>&lt;h1&gt;Tecnologia acessível para aprender, trabalhar e participar&lt;/h1&gt;
+
+&lt;section id="sobre" aria-labelledby="titulo-sobre"&gt;
+  &lt;h2 id="titulo-sobre"&gt;Sobre a oficina&lt;/h2&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Objetivo&lt;/h3&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+
+      <h2>6. Imagem com texto alternativo</h2>
+      <p>
+        A imagem principal foi inserida com <code>&lt;img&gt;</code> dentro de
+        <code>&lt;figure&gt;</code>. O atributo <code>alt</code> descreve o conteúdo
+        essencial da imagem para pessoas que usam leitor de tela ou para casos em que a
+        imagem não carrega.
+      </p>
+      <pre><code>&lt;figure class="hero-media"&gt;
+  &lt;img
+    src="assets/oficina-inclusao-digital.png"
+    alt="Grupo diverso de pessoas aprendendo a usar computadores e tablets em uma sala acessível."
+  &gt;
+  &lt;figcaption&gt;
+    Ambiente colaborativo com tecnologia assistiva, sinalização clara e espaço acessível.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      <p>
+        A tag <code>&lt;figure&gt;</code> foi escolhida porque a imagem tem valor
+        informativo dentro da página. A legenda complementa a descrição visual.
+      </p>
+
+      <h2>7. Lista de informações</h2>
+      <p>
+        A lista de dados rápidos foi criada com <code>&lt;ul&gt;</code> e
+        <code>&lt;li&gt;</code>. Listas ajudam na leitura porque agrupam informações
+        relacionadas de forma objetiva.
+      </p>
+      <pre><code>&lt;aside class="notice" aria-labelledby="titulo-dados"&gt;
+  &lt;h3 id="titulo-dados"&gt;Informações rápidas&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Data: 21 de setembro de 2026&lt;/li&gt;
+    &lt;li&gt;Horário: das 14h às 17h&lt;/li&gt;
+    &lt;li&gt;Local: Laboratório de Informática do IFSP&lt;/li&gt;
+    &lt;li&gt;Vagas: 30 participantes&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+
+      <h2>8. Construção do formulário acessível</h2>
+      <p>
+        O formulário usa <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>,
+        <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, campos de entrada e
+        um <code>&lt;button&gt;</code>. Cada campo possui um rótulo associado pelo par
+        <code>for</code> e <code>id</code>.
+      </p>
+      <pre><code>&lt;form action="#" method="post" aria-describedby="ajuda-formulario"&gt;
+  &lt;p id="ajuda-formulario" class="form-help"&gt;
+    Este formulário é demonstrativo e não envia dados para um servidor.
+  &lt;/p&gt;
+
+  &lt;div class="field"&gt;
+    &lt;label for="nome"&gt;Nome completo (obrigatório)&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" autocomplete="name" required&gt;
+  &lt;/div&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Necessita de recurso de acessibilidade?&lt;/legend&gt;
+    &lt;input type="radio" id="recurso-sim" name="recurso" value="sim"&gt;
+    &lt;label for="recurso-sim"&gt;Sim&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button class="button primary" type="submit"&gt;Enviar inscrição&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      <p>
+        O <code>&lt;fieldset&gt;</code> agrupa as opções de radio e o
+        <code>&lt;legend&gt;</code> explica o assunto do grupo. O botão possui texto claro,
+        indicando exatamente a ação: enviar a inscrição.
+      </p>
+
+      <h2>9. Desenvolvimento do CSS</h2>
+      <p>
+        O CSS foi criado com variáveis de cor, layout responsivo, botões reutilizáveis e
+        estilos de foco. As cores usam contraste forte entre texto e fundo.
+      </p>
+      <pre><code>:root {
+  --text: #17201f;
+  --primary-dark: #004c47;
+  --focus: #ffbf00;
+}
+
+body {
+  background: #f7faf9;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 4px;
+}</code></pre>
+      <p>
+        O seletor <code>:focus-visible</code> foi escolhido para mostrar claramente qual
+        elemento está ativo durante a navegação por teclado. Isso melhora o uso da página
+        para pessoas que não utilizam mouse.
+      </p>
+
+      <h2>10. Recursos de acessibilidade implementados</h2>
+      <ul class="checklist">
+        <li>Idioma definido com <code>lang="pt-BR"</code>.</li>
+        <li>Uso de HTML semântico.</li>
+        <li>Hierarquia correta de títulos.</li>
+        <li>Imagem com atributo <code>alt</code>.</li>
+        <li>Legenda associada à imagem com <code>&lt;figcaption&gt;</code>.</li>
+        <li>Links com textos descritivos.</li>
+        <li>Botões com ações claras.</li>
+        <li>Labels associados aos campos do formulário.</li>
+        <li>Agrupamento de opções com <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code>.</li>
+        <li>Campos obrigatórios indicados no rótulo.</li>
+        <li>Contraste adequado entre texto e fundo.</li>
+        <li>Destaque visual de foco com <code>:focus-visible</code>.</li>
+        <li>Link para pular diretamente ao conteúdo principal.</li>
+        <li>Layout responsivo para tela grande e telas menores.</li>
+      </ul>
+
+      <h2>11. Testes de acessibilidade realizados</h2>
+      <p>Foram realizados testes manuais durante o desenvolvimento:</p>
+      <ol>
+        <li>
+          Navegação por teclado usando a tecla Tab para verificar se links, botões e campos
+          do formulário recebem foco.
+        </li>
+        <li>
+          Teste do link "Pular para o conteúdo principal", que aparece quando recebe foco.
+        </li>
+        <li>
+          Conferência da hierarquia dos títulos, mantendo um único <code>&lt;h1&gt;</code>
+          e seções com <code>&lt;h2&gt;</code>.
+        </li>
+        <li>
+          Verificação do texto alternativo da imagem principal.
+        </li>
+        <li>
+          Conferência dos campos do formulário para garantir associação entre
+          <code>&lt;label&gt;</code> e os respectivos <code>id</code>.
+        </li>
+        <li>
+          Captura da página em desktop para observar a organização visual e possíveis
+          problemas de sobreposição.
+        </li>
+      </ol>
+      <p class="note">
+        Resultado: a página permite navegação por teclado, apresenta foco visível,
+        possui estrutura semântica clara e mantém boa leitura em tamanhos diferentes de tela.
+      </p>
+
+      <h2>12. Captura de tela da página</h2>
+      <figure>
+        <img src="../screenshots/desktop.png" alt="Captura da página Tech Para Todos em tela desktop.">
+        <figcaption>Captura em tela grande mostrando cabeçalho, menu, chamada principal e imagem.</figcaption>
+      </figure>
+
+      <h2>13. Conclusão</h2>
+      <p>
+        A principal dificuldade foi equilibrar design visual, responsividade e acessibilidade.
+        Foi necessário ajustar tamanhos, espaçamentos e foco para que a página funcionasse
+        bem com mouse, teclado e telas menores.
+      </p>
+      <p>
+        O principal aprendizado foi perceber que acessibilidade não é apenas adicionar
+        atributos, mas organizar o conteúdo com significado, escrever textos claros,
+        associar rótulos aos campos e garantir que todas as pessoas consigam navegar e
+        compreender a página.
+      </p>
+    </main>
+  </body>
+</html>

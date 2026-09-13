@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Para Todos | Oficina de Inclusão Digital</title>
+    <meta
+      name="description"
+      content="Página acessível sobre uma oficina gratuita de inclusão digital com recursos de HTML semântico e boas práticas de acessibilidade."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header class="site-header" id="inicio">
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="Tech Para Todos, início">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span>Tech Para Todos</span>
+        </a>
+
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#programacao">Programação</a></li>
+          <li><a href="#acessibilidade">Acessibilidade</a></li>
+          <li><a href="#inscricao">Inscrição</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Oficina gratuita de inclusão digital</p>
+          <h1>Tecnologia acessível para aprender, trabalhar e participar</h1>
+          <p>
+            Um encontro prático para pessoas que querem usar ferramentas digitais
+            com autonomia, segurança e recursos de acessibilidade.
+          </p>
+          <div class="hero-actions" aria-label="Ações principais">
+            <a class="button primary" href="#inscricao">Fazer inscrição</a>
+            <a class="button secondary" href="#programacao">Ver programação</a>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <img
+            src="assets/oficina-inclusao-digital.png"
+            alt="Grupo diverso de pessoas aprendendo a usar computadores e tablets em uma sala acessível."
+          >
+          <figcaption>
+            Ambiente colaborativo com tecnologia assistiva, sinalização clara e espaço acessível.
+          </figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <main id="conteudo-principal" tabindex="-1">
+      <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+        <div class="section-heading">
+          <p class="eyebrow">Apresentação</p>
+          <h2 id="titulo-sobre">Sobre a oficina</h2>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel">
+            <h3>Objetivo</h3>
+            <p>
+              A oficina Tech Para Todos ensina recursos básicos de computadores,
+              celulares, navegação segura e acessibilidade digital.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Público-alvo</h3>
+            <p>
+              A atividade é indicada para estudantes, trabalhadores, pessoas idosas
+              e qualquer pessoa que deseje ganhar autonomia no uso da tecnologia.
+            </p>
+          </article>
+
+          <aside class="notice" aria-labelledby="titulo-dados">
+            <h3 id="titulo-dados">Informações rápidas</h3>
+            <ul>
+              <li>Data: 21 de setembro de 2026</li>
+              <li>Horário: das 14h às 17h</li>
+              <li>Local: Laboratório de Informática do IFSP</li>
+              <li>Vagas: 30 participantes</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="programacao" aria-labelledby="titulo-programacao">
+        <div class="section-heading">
+          <p class="eyebrow">Conteúdo</p>
+          <h2 id="titulo-programacao">Programação do encontro</h2>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <h3>Boas-vindas e diagnóstico</h3>
+            <p>Conversa inicial para entender necessidades dos participantes.</p>
+          </li>
+          <li>
+            <h3>Navegação segura</h3>
+            <p>Prática com navegador, senhas, links confiáveis e privacidade.</p>
+          </li>
+          <li>
+            <h3>Recursos de acessibilidade</h3>
+            <p>Uso de zoom, contraste, leitor de tela, legendas e navegação por teclado.</p>
+          </li>
+          <li>
+            <h3>Atividade guiada</h3>
+            <p>Resolução de tarefas reais com apoio dos monitores.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="acessibilidade" aria-labelledby="titulo-acessibilidade">
+        <div class="section-heading">
+          <p class="eyebrow">Boas práticas</p>
+          <h2 id="titulo-acessibilidade">Recursos de acessibilidade da página</h2>
+        </div>
+
+        <div class="feature-list">
+          <article>
+            <h3>HTML semântico</h3>
+            <p>
+              A estrutura usa header, nav, main, section, article, aside, figure e footer
+              para organizar as regiões da página.
+            </p>
+          </article>
+          <article>
+            <h3>Foco visível</h3>
+            <p>
+              Links, botões e campos do formulário recebem destaque claro quando são
+              acessados pelo teclado.
+            </p>
+          </article>
+          <article>
+            <h3>Formulário rotulado</h3>
+            <p>
+              Cada campo possui label associado, textos de ajuda e agrupamentos com
+              fieldset e legend.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="inscricao" aria-labelledby="titulo-inscricao">
+        <div class="form-layout">
+          <div>
+            <p class="eyebrow">Participação</p>
+            <h2 id="titulo-inscricao">Formulário de inscrição</h2>
+            <p>
+              Preencha os campos para demonstrar uma estrutura acessível de formulário.
+              Os campos obrigatórios estão indicados no texto do rótulo.
+            </p>
+            <p>
+              Também é possível consultar orientações adicionais no
+              <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/pt-br" target="_blank" rel="noreferrer">
+                guia introdutório de acessibilidade web da W3C
+              </a>.
+            </p>
+          </div>
+
+          <form action="#" method="post" aria-describedby="ajuda-formulario">
+            <p id="ajuda-formulario" class="form-help">
+              Este formulário é demonstrativo e não envia dados para um servidor.
+            </p>
+
+            <div class="field">
+              <label for="nome">Nome completo (obrigatório)</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail (obrigatório)</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="perfil">Perfil do participante</label>
+              <select id="perfil" name="perfil">
+                <option value="">Selecione uma opção</option>
+                <option value="estudante">Estudante</option>
+                <option value="trabalhador">Trabalhador(a)</option>
+                <option value="idoso">Pessoa idosa</option>
+                <option value="comunidade">Comunidade externa</option>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend>Necessita de recurso de acessibilidade?</legend>
+              <div class="option">
+                <input type="radio" id="recurso-sim" name="recurso" value="sim">
+                <label for="recurso-sim">Sim</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="recurso-nao" name="recurso" value="nao">
+                <label for="recurso-nao">Não</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="mensagem">Descreva sua necessidade ou dúvida</label>
+              <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+
+            <div class="option">
+              <input type="checkbox" id="confirmacao" name="confirmacao" required>
+              <label for="confirmacao">Confirmo meu interesse em participar da oficina (obrigatório)</label>
+            </div>
+
+            <button class="button primary" type="submit">Enviar inscrição</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Tech Para Todos. Projeto acadêmico sobre HTML semântico e acessibilidade web.</p>
+      <a href="#inicio">Voltar ao início</a>
+    </footer>
+  </body>
+</html>
